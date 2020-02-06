@@ -1,0 +1,37 @@
+@keyframes animate-area {
+		from { background-position: 0 100%; }
+		to { background-position: 0 0; }
+	}
+	@-webkit-keyframes animate-area {
+		from { background-position: 0 100%;; }
+		to { background-position: 0 0; }
+	}
+	@-ms-keyframes animate-area {
+		from { background-position:0 100%;; }
+		to { background-position: 0 0; }
+	}
+	@-moz-keyframes animate-area {
+		from { background-position: 0 100%;; }
+		to { background-position: 0 0; }
+	}
+
+	#animate-area	{
+		width: 100%;
+		height: 100%;
+		background-image: url(https://i.ya-webdesign.com/images/snow-falling-transparent-background-png-7.gif);
+		background-position: 0 100%;
+		background-repeat: repeat-y;
+
+		animation: animate-area 10s linear infinite;
+		-ms-animation: animate-area 10s linear infinite;
+		-moz-animation: animate-area 10s linear infinite;
+		-webkit-animation: animate-area 10s linear infinite;
+	}
+
+
+    <link rel="stylesheet" href="background-animation.css"
+		<!-- animated gif background
+		<style>
+		<div id="animate-area">
+		</div>
+		</style>-->

@@ -1,0 +1,103 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JUMP SCARES FOR YOUR WEBSITE</title>
+	<script src="haunt_your_website/ghost.js"></script>
+	<style>
+		body{
+			font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+			font-size: 100%;
+			background-color:black;
+		}
+		#jumpscare {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			cursor: pointer;
+			visibility: hidden;
+		}
+		a:link{
+			color:darkblue;
+		}
+		a:visited{
+			color:lightblue;
+		}
+		#dtitle{
+			font-size: 150%;
+			font-style: bold;
+		}
+		/* #dpage{
+			margin: auto;
+			width: 80%;
+			border: 3px solid black;
+			padding: 10px;
+			background-color:white;
+			/*background: rgb(255, 255, 255);
+		    background: rgba(255,255,255, 0.8);*/
+		} */
+		/*background layers*/
+		#bck_scroll{
+			z-index: -5;
+			/*opacity: .3;*/
+		}
+		#bck_img{
+			z-index: -6;
+		}
+		#bck_scroll, #bck_img{
+			position: fixed;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+		}
+		#wallpaper img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			min-width: 100%;
+			min-height: 100%;
+			/*pixel*/
+			image-rendering: auto;
+			image-rendering: crisp-edges;
+			image-rendering: pixelated;
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -o-crisp-edges;
+			-ms-interpolation-mode: nearest-neighbor;
+		}
+	</style>
+</head>
+<body onload="ghost_init(true);">
+	<!-- test content here -->
+	<div id="dpage">
+	</div>
+	<div id="wallpaper">
+		<div id="bck_scroll"><img src="readme/IMG_BACK_FIELD_01.gif"></div>
+		<div id="bck_img"></div>
+
+	</div>
+	<img id="jumpscare" src="https://steamuserimages-a.akamaihd.net/ugc/941699838692248088/A4942C644C32CAFBCABFBCB974C91D0142AA736F/"/>
+	<audio control id="scream" src="https://www.myinstants.com/media/sounds/jumpscare-sound-fnaf-4.mp3"/>
+	<script>
+	function jumpscare(){
+		var jumpscare = document.getElementById("jumpscare");
+		jumpscare.style.visibility="visible";
+		var audio = document.getElementById("scream");
+			audio.volume = 0.1; //increase volume for jumpscare
+			audio.play();
+	}
+	function nextPage() {
+		location.replace("../badEnd.html")
+	}
+setTimeout(jumpscare, 30000)
+setTimeout(nextPage, 32000)
+	</script>
+</body>
+<script type="text/javascript">
+  alert("THE PAGE EXPLODED \n You woke up in an UNKNOWN LOCATION");
+</script>
+</html>
