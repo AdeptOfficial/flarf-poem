@@ -29,3 +29,7 @@ function breathBtn() {
 function nyanBtn() {
   location.replace("nyancatpage.html");
 }
+
+function ggwp() {
+  location.replace("p3/index.html");
+}
